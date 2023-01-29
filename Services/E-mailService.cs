@@ -1,8 +1,9 @@
-﻿using System.Net.Mail;
+﻿using Csharp_Exam.Interfaces;
+using System.Net.Mail;
 
 namespace Csharp_Exam.Services
 {
-    public class E_mailService
+    public class E_mailService : ISendReport
     {
         //      Tested and working
         public void SendEmail(string fileName)

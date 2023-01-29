@@ -1,13 +1,13 @@
-﻿namespace Csharp_Exam.Models
-{
-    public class Food : MenuItem
-    {
+﻿using Csharp_Exam.Interfaces;
 
-        //public Food(string category, string name, decimal price)
-        //{
-        //    Category = category;
-        //    Name = name;
-        //    Price = price;
-        //}
+namespace Csharp_Exam.Models
+{
+    public class Food : IMenuItem
+    {
+        public int Number { get; set; }
+        public string Category { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+
     }
 }

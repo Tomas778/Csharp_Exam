@@ -1,4 +1,5 @@
-﻿using Csharp_Exam.Models;
+﻿using Csharp_Exam.Interfaces;
+using Csharp_Exam.Models;
 
 namespace Csharp_Exam.Services
 {
@@ -51,7 +52,7 @@ namespace Csharp_Exam.Services
                 Console.WriteLine($"========Check Debug Folder For Bill========");
                 sw.WriteLine($"=====================================");
             }
-            if (false) //If you want to enable this service make sure you have valid e-mail service instructions inside in the class 
+            if (false) //If you want to enable this service make sure you have valid e-mail service instructions inside in the class "E-mailService.cs" 
             {
                 var SendBill = new E_mailService();
                 SendBill.SendEmail($"{OrderTable.OrderDateTime.ToString("yyyy-MM-dd_HH-mm-ss")}_Table_{OrderTable.OrderTable.Number}_check.txt");
@@ -62,12 +63,12 @@ namespace Csharp_Exam.Services
         public decimal Pay()
         {
             decimal sum = 0;
-            foreach (MenuItem item in OrderTable.OrderDrinks)
+            foreach (IMenuItem item in OrderTable.OrderDrinks)
             {
                 sum += item.Price;
             }
 
-            foreach (MenuItem item in OrderTable.OrderMeals)
+            foreach (IMenuItem item in OrderTable.OrderMeals)
             {
                 sum += item.Price;
             }

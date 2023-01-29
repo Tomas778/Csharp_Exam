@@ -31,7 +31,7 @@ class Program
         var taskOut = CustomersGoingOut();
         await Task.WhenAll(taskIn, taskOut);
 
-        Console.WriteLine("Simulation finished...Thank you come again!");
+        Console.WriteLine("Simulation finished...Thank you, come again!");
         Console.ReadKey();
 
 

@@ -26,7 +26,9 @@ namespace Csharp_Exam.Services
             DatabaseObject = databaseObject;
             RemoveTablAtNumber = removeTablAtNumber;
         }
-
+        /// <summary>
+        /// Set Reservation in DB table
+        /// </summary>
         public void ReservIt()
         {
 
@@ -45,7 +47,9 @@ namespace Csharp_Exam.Services
                 command.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Remove Reservation in DB table
+        /// </summary>
         public void RemoveReservation()
         {
 
@@ -64,7 +68,9 @@ namespace Csharp_Exam.Services
                 command.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Remove Reservation in DB table based on int number at class construct
+        /// </summary>
         public void RemoveReservationAtNumber()
         {
 

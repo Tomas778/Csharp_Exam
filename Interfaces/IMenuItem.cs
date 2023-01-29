@@ -1,6 +1,6 @@
-﻿namespace Csharp_Exam.Models
+﻿namespace Csharp_Exam.Interfaces
 {
-    public class MenuItem
+    public interface IMenuItem
     {
         public int Number { get; set; }
         public string Category { get; set; }
