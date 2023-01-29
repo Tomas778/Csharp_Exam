@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Csharp_ExamUnitTests\**" />
+    <Compile Remove="packages\**" />
+    <EmbeddedResource Remove="Csharp_ExamUnitTests\**" />
+    <EmbeddedResource Remove="packages\**" />
+    <None Remove="Csharp_ExamUnitTests\**" />
+    <None Remove="packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.117" />
   </ItemGroup>
 
